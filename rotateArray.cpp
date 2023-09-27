@@ -25,6 +25,9 @@ int main(){
     int key;
     cout<<"Enter the value of k: ";
     cin>>key;
+    if(key>n){
+        key %=v.size();
+    }
 
     reverse(v,0,(v.size() - key)-1);
     reverse(v,v.size() - key,v.size() - 1);
